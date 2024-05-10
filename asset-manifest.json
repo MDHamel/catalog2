@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/static/css/main.567777cb.css",
+    "main.js": "/static/js/main.2efc7ed4.js",
+    "static/media/Tulips.png": "/static/media/Tulips.0913904577197f8ec123.png",
+    "static/media/flower.jpg": "/static/media/flower.7f2e58e1c930c56815f6.jpg",
+    "static/media/wedding-event.jpg": "/static/media/wedding-event.ce26a2191ed5e6162dab.jpg",
+    "static/media/valentines-day-promotion.jpg": "/static/media/valentines-day-promotion.4228e39854a887638af7.jpg",
+    "static/media/VALENTINES-white-red-rose.jpg": "/static/media/VALENTINES-white-red-rose.c0b21fa8065915207500.jpg",
+    "static/media/purple-rose.jpg": "/static/media/purple-rose.ec05000755f20e0926d0.jpg",
+    "index.html": "/index.html",
+    "main.567777cb.css.map": "/static/css/main.567777cb.css.map",
+    "main.2efc7ed4.js.map": "/static/js/main.2efc7ed4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.567777cb.css",
+    "static/js/main.2efc7ed4.js"
+  ]
+}
