@@ -1,0 +1,162 @@
+.slideshow{
+    margin: 0;
+    overflow-x: hidden !important;
+  
+    height: 700px;
+  }
+  
+  figure{
+    overflow: hidden;
+  }
+  
+  img{
+    overflow: hidden;
+  }
+  
+  .slideshow div:not(#focusImage){
+    scale: .65;
+  }
+  
+  .slideshow div{
+    position: absolute;
+    
+  }
+  
+  #focusImage{  
+    left: 50%;
+    translate: -50%;
+  
+    z-index: 900;
+  }
+  
+  #leftImage{
+    left: 0;
+    translate: -50%;
+    
+    z-index: 50;
+  }
+  
+  #rightImage{
+    left: 100%;
+    translate: -50%;
+  
+    z-index: 50;
+  }
+  
+  #previewLeft{
+    position: absolute;
+    left: -50%;
+    translate: -50%;
+  
+    z-index: 10;
+  }
+  
+  #previewRight{
+    position: absolute;
+    left: 150%;
+    translate: -50%;
+  
+    z-index: 10;
+  }
+  
+  
+  .goingLeft#focusImage{
+    --dir: 0;
+    animation: leaveFocus var(--timing) 1s ease-in forwards;
+  }
+  
+  .goingLeft#leftImage{
+    --dir: -1;
+    animation: imageOffScreen var(--timing) 1s ease-in forwards;
+  }
+  
+  .goingLeft#rightImage{
+    --dir: 1;
+    animation: becomeFocus var(--timing) 1s ease-in forwards;
+  }
+  
+  
+  div.goingRight#focusImage{
+    --dir: 100%;
+    animation: leaveFocus var(--timing) 1s ease-in forwards;
+  }
+  
+  div.goingRight#leftImage{
+    --dir: -1;
+    animation: becomeFocus var(--timing) 1s ease-in forwards;
+  }
+  
+  div.goingRight#rightImage{
+    --dir: 1;
+    animation: imageOffScreen var(--timing) 1s ease-in forwards;
+  }
+  
+  
+  div.goingLeft#previewRight{
+    animation: showPreviewRight var(--timing) 1s ease-in forwards ;
+  }
+  
+  div.goingRight#previewLeft{
+      animation: showPreviewLeft var(--timing) 1s ease-in forwards;
+  }
+  
+  
+  
+  
+  
+  @keyframes leaveFocus {
+    100%{
+      left: var(--dir);
+      scale: .65;
+      translate: -50%;
+    }
+  }
+  
+  @keyframes imageOffScreen{
+    100%{
+      left: calc(150% * var(--dir));
+    }
+  }
+  
+  @keyframes becomeFocus {
+    100%{
+      scale: 1;
+      left: 50%;
+      translate: -50%;
+    }
+  }
+  
+  @keyframes showPreviewRight{
+    100%{
+      left: 100%;
+      translate: -50%;
+  
+    }
+  }
+  
+  @keyframes showPreviewLeft{
+  100%{
+      left: 0;
+      translate: -50%;
+    }
+  }
+  
+  
+  
+  h1#hidden{
+    animation: reveal-text .15s reverse forwards;
+  }
+  
+  h1#reveal{
+    animation: reveal-text .15s;
+  
+  }
+  
+  @keyframes reveal-text{
+    from{
+      opacity: 0;
+    }
+    to{
+      opacity: 1;
+    }
+  }

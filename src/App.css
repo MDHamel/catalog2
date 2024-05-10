@@ -1,4 +1,101 @@
-.App {
-  
+body{
+  overflow-x: hidden;
 }
 
+.App {
+  z-index: -10;
+}
+
+.nav1{
+
+}
+
+.nav1 p{
+  width: 5%;
+}
+
+.nav2{
+  width: 100%;
+  margin:0;
+}
+
+.nav2 a{
+  margin: 0;
+  height: 100%;
+
+  user-select: none;
+  cursor: pointer;
+  text-decoration: none;
+  border-right: 2px solid white;
+}
+
+.nav2 a:hover{
+  background-color: rgba(255,255,255,.1)   !important;
+}
+
+.nav2 a:nth-child(1){
+  border-left: 2px solid white;
+}
+
+@media only screen and (max-width: 768px) {
+  .nav1 p{
+    width: 10%;
+  }
+  
+
+  .nav2 a{
+    border-top: 2px solid white;
+  }
+  .nav2 a:nth-child(1){
+    border-left: none;
+  }
+  .nav2 a:nth-child(3){
+    border-right: none;
+  }
+  .nav2 a:nth-child(5){
+    border-right: none;
+  }
+
+}
+
+
+.ff-lato{
+  font-family: Lato, Arial !important;
+}
+
+.ff-montserrat{
+  font-family: Montserrat, Arial !important;
+}
+
+#EventPlacard{
+  position: relative;
+
+  max-height: 600px;
+}
+
+#EventPlacard img{
+  max-height: 600px;
+  object-fit: cover;
+}
+
+.carousel-control-next-icon, .carousel-control-prev-icon{
+
+}
+
+.carousel-text{
+  text-shadow:  4px 4px 8px rgba(0, 0, 0, 1);
+}
+
+
+
+#logo{
+  text-align: center;
+  font-family: Montserrat, Arial !important;
+  padding: 4px;
+  cursor: pointer;
+  transition: scale .45s;
+}
+
+#logo:hover{
+  width: 8%;
+}
